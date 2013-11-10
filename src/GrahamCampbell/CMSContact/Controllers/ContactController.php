@@ -76,7 +76,7 @@ class ContactController extends BaseController {
                 'url'     => $url,
                 'contact' => $input['email'],
                 'name'    => $input['first_name'].' '.$input['last_name'],
-                'message' => $input['message']
+                'quote'   => $input['message']
             );
 
             Queuing::pushMail($data);
@@ -87,7 +87,7 @@ class ContactController extends BaseController {
                 'subject' => Config::get('cms.name').' - Notification',
                 'url'     => $url,
                 'name'    => $input['first_name'],
-                'message' => $input['message']
+                'quote'   => $input['message']
             );
 
             Queuing::pushMail($data);
