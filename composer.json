@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.4.7",
-        "graham-campbell/cms-core": "2.0.*"
+        "graham-campbell/cms-core": "dev-master"
     },
     "require-dev": {
         "mockery/mockery": "0.8.*@stable",
