@@ -4,7 +4,7 @@
         <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="first_name">First Name</label>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-10">
             <input name="first_name" id="first_name" value="{{ Request::old('first_name') }}" type="text" class="form-control" placeholder="First Name">
-            {{ ($errors->has('first_name') ? $errors->first('first_name') : '') ?>
+            {{ ($errors->has('first_name') ? $errors->first('first_name') : '') }}
         </div>
     </div>
 
