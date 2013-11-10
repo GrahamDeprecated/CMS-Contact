@@ -1,0 +1,26 @@
+{
+    "name": "graham-campbell/cms-contact",
+    "description": "CMS Contact Is A Bootstrap CMS Plugin That Adds A Contact Form Backend",
+    "keywords": ["laravel", "framework", "cms contact", "cms", "contact", "form", "contact form", "CMS Contact", "CMS-Contact", "Graham Campbell", "GrahamCampbell"],
+    "license": "GNU Affero General Public License v3",
+    "authors": [
+        {
+            "name": "Graham Campbell",
+            "email": "graham@mineuk.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.7",
+        "graham-campbell/cms-core": "2.0.*",
+    },
+    "require-dev": {
+        "mockery/mockery": "0.8.*@stable",
+        "phpunit/phpunit": "3.7.*@stable"
+    },
+    "autoload": {
+        "psr-0": {
+            "GrahamCampbell\\CMSContact": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
