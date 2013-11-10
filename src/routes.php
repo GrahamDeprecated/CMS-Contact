@@ -20,4 +20,4 @@
  * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
 
-Route::post('contact', array('as' => 'contact.post', 'uses' => 'GrahamCampbell\ContactCMS\Controllers\ContactController@postSubmit'));
+Route::post('contact', array('as' => 'contact.post', 'uses' => 'GrahamCampbell\CMSContact\Controllers\ContactController@postSubmit'));
