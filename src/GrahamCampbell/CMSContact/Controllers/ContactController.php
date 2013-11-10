@@ -35,7 +35,12 @@ use GrahamCampbell\CMSCore\Controllers\BaseController;
 class ContactController extends BaseController {
 
     public function postSubmit() {
-        $input = Binput::all();
+        $input = array(
+            'first_name' => Binput::get('first_name'),
+            'last_name'  => Binput::get('last_name'),
+            'email'      => Binput::get('email'),
+            'message'    => Binput::get('message')
+        );
 
         $rules = array(
             'first_name' => 'required',
