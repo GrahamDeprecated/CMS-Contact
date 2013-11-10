@@ -29,6 +29,7 @@ use URL;
 use Validator;
 
 use GrahamCampbell\Binput\Facades\Binput;
+use GrahamCampbell\HTMLMin\Facades\HTMLMin;
 use GrahamCampbell\CMSCore\Facades\UserProvider;
 use GrahamCampbell\CMSCore\Controllers\BaseController;
 
@@ -68,6 +69,8 @@ class ContactController extends BaseController {
 
         $url = URL::route('pages.show', array('pages' => 'home'));
 
+        $quote = HTMLMin::render(nl2br(e($input['message'])));
+
         try {
             $data = array(
                 'view'    => 'cms-contact::message',
@@ -76,7 +79,7 @@ class ContactController extends BaseController {
                 'url'     => $url,
                 'contact' => $input['email'],
                 'name'    => $input['first_name'].' '.$input['last_name'],
-                'quote'   => $input['message']
+                'quote'   => $quote
             );
 
             Queuing::pushMail($data);
@@ -87,7 +90,7 @@ class ContactController extends BaseController {
                 'subject' => Config::get('cms.name').' - Notification',
                 'url'     => $url,
                 'name'    => $input['first_name'],
-                'quote'   => $input['message']
+                'quote'   => $quote
             );
 
             Queuing::pushMail($data);
