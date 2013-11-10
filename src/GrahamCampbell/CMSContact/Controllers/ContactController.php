@@ -74,7 +74,7 @@ class ContactController extends BaseController {
                 'email'   => $email,
                 'subject' => Config::get('cms.name').' - New Message',
                 'url'     => $url,
-                'mail'    => $input['email'],
+                'contact' => $input['email'],
                 'name'    => $input['first_name'].' '.$input['last_name'],
                 'message' => $input['message']
             );
@@ -98,6 +98,6 @@ class ContactController extends BaseController {
         }
 
         Session::flash('success', 'Your message was sent successfully. Thank you for contacting us.');
-        return Redirect::route(URL::route('pages.show', array('pages' => 'home')));
+        return Redirect::route('pages.show', array('pages' => 'home'));
     }
 }
