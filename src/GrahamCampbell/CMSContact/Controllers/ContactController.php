@@ -21,7 +21,7 @@
  */
 
 use Config;
-use Queueing;
+use Queuing;
 use Log;
 use Redirect;
 use Session;

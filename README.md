@@ -23,7 +23,7 @@ CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Boostrap-CMS)
 * CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
 * CMS Contact uses [Composer](https://getcomposer.org) to load and manage dependencies.  
 * CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/master/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
-* CMS Contact is licensed under the Apache License, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
+* CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
 
 
 ## System Requirements
