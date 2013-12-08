@@ -10,9 +10,6 @@ CMS Contact
 [![Still Maintained](http://stillmaintained.com/GrahamCampbell/CMS-Contact.png)](http://stillmaintained.com/GrahamCampbell/CMS-Contact)
 
 
-## THIS ALPHA RELEASE IS FOR TESTING ONLY
-
-
 ## What Is CMS Contact?
 
 CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Boostrap-CMS) plugin that adds a contact form backend.  
