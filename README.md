@@ -12,7 +12,7 @@ CMS Contact
 
 ## What Is CMS Contact?
 
-CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Boostrap-CMS) plugin that adds a contact form backend.  
+CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Bootstrap-CMS) plugin that adds a contact form backend.  
 
 * CMS Contact was created by, and is maintained by [Graham Campbell](https://github.com/GrahamCampbell).  
 * CMS Contact relies on my [CMS Core](https://github.com/GrahamCampbell/CMS-Core) package.  
