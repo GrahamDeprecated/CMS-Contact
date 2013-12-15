@@ -26,7 +26,7 @@ CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Bootstrap-CMS
 ## System Requirements
 
 * PHP 5.4.7+ or PHP 5.5+ is required.
-* You will need [Laravel 4.1](http://laravel.com) because this package is designed for it.  
+* You will need [Laravel 4.0](http://laravel.com) because this package is designed for it.  
 * You will need [Composer](https://getcomposer.org) installed to load the dependencies of CMS-Contact.  
 
 
