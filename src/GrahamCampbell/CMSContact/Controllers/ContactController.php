@@ -1,4 +1,4 @@
-<?php namespace GrahamCampbell\CMSContact\Controllers;
+<?php
 
 /**
  * This file is part of CMS Contact by Graham Campbell.
@@ -12,27 +12,31 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Affero General Public License for more details.
- *
- * @package    CMS-Contact
- * @author     Graham Campbell
- * @license    GNU AFFERO GENERAL PUBLIC LICENSE
- * @copyright  Copyright (C) 2013  Graham Campbell
- * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
 
-use Config;
-use Queuing;
-use Log;
-use Redirect;
-use Session;
-use URL;
-use Validator;
+namespace GrahamCampbell\CMSContact\Controllers;
 
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Validator;
 use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\HTMLMin\Facades\HTMLMin;
+use GrahamCampbell\Queuing\Facades\Queuing;
 use GrahamCampbell\CMSCore\Facades\UserProvider;
 use GrahamCampbell\CMSCore\Controllers\BaseController;
 
+/**
+ * This is the contact controller class.
+ *
+ * @package    CMS-Contact
+ * @author     Graham Campbell
+ * @copyright  Copyright (C) 2013  Graham Campbell
+ * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md
+ * @link       https://github.com/GrahamCampbell/CMS-Contact
+ */
 class ContactController extends BaseController
 {
     public function postSubmit()
