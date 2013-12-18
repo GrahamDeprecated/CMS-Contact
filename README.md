@@ -3,30 +3,30 @@ CMS Contact
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GrahamCampbell/CMS-Contact/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![Build Status](https://travis-ci.org/GrahamCampbell/CMS-Contact.png?branch=master)](https://travis-ci.org/GrahamCampbell/CMS-Contact)
-[![Latest Version](https://poser.pugx.org/graham-campbell/cms-contact/v/stable.png)](https://packagist.org/packages/graham-campbell/cms-contact)
-[![Total Downloads](https://poser.pugx.org/graham-campbell/cms-contact/downloads.png)](https://packagist.org/packages/graham-campbell/cms-contact)
+[![Build Status](https://travis-ci.org/GrahamCampbell/CMS-Contact.png?branch=develop)](https://travis-ci.org/GrahamCampbell/CMS-Contact)
+[![Coverage Status](https://coveralls.io/repos/GrahamCampbell/CMS-Contact/badge.png?branch=develop)](https://coveralls.io/r/GrahamCampbell/CMS-Contact)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact/badges/quality-score.png?s=dc4c5381f6889d8e70061d20d77fe81b571676bd)](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact)
+[![Latest Version](https://poser.pugx.org/graham-campbell/cms-contact/v/stable.png)](https://packagist.org/packages/graham-campbell/cms-contact)
 [![Still Maintained](http://stillmaintained.com/GrahamCampbell/CMS-Contact.png)](http://stillmaintained.com/GrahamCampbell/CMS-Contact)
 
 
 ## What Is CMS Contact?
 
-CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Bootstrap-CMS) plugin that adds a contact form backend.  
+CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin that adds a contact form backend.  
 
 * CMS Contact was created by, and is maintained by [Graham Campbell](https://github.com/GrahamCampbell).  
 * CMS Contact relies on my [CMS Core](https://github.com/GrahamCampbell/CMS-Core) package.  
 * CMS Contact uses [Travis CI](https://travis-ci.org/GrahamCampbell/CMS-Contact) to run tests to check if it's working as it should.  
-* CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
+* CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) and [Coveralls](https://coveralls.io/r/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
 * CMS Contact uses [Composer](https://getcomposer.org) to load and manage dependencies.  
-* CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/master/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
-* CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
+* CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/develop/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
+* CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md).  
 
 
 ## System Requirements
 
-* PHP 5.4.7+ or PHP 5.5+ is required.
-* You will need [Laravel 4.0](http://laravel.com) because this package is designed for it.  
+* PHP 5.4.7+ or PHP 5.5+ is required.  
+* You will need a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) application like [Bootstrap CMS](https://github.com/GrahamCampbell/Bootstrap-CMS) because this package is designed for it.  
 * You will need [Composer](https://getcomposer.org) installed to load the dependencies of CMS-Contact.  
 
 
@@ -34,17 +34,33 @@ CMS Contact is a [Bootstrap CMS](https://github.com/GrahamCampbell/Bootstrap-CMS
 
 Please check the system requirements before installing CMS Contact.  
 
-To get the latest version of CMS Contact, simply require it in your `composer.json` file.
+To get the latest version of CMS Contact, simply require it in your `composer.json` file.  
 
-`"graham-campbell/cms-contact": "dev-master"`
+`"graham-campbell/cms-contact": "dev-master"`  
 
-You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
+You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.  
 
-Once CMS Contact is installed, you need to register the service provider. Open up `app/config/app.php` and add the following to the `providers` key.
+You will need to register many service providers before you attempt to load the CMS Contact service provider. Open up `app/config/app.php` and add the following to the `providers` key.  
 
-`'GrahamCampbell\CMSContact\CMSContactServiceProvider'`
+`'GrahamCampbell\Queuing\QueuingServiceProvider'`  
+`'GrahamCampbell\HTMLMin\HTMLMinServiceProvider'`  
+`'GrahamCampbell\Security\SecurityMinServiceProvider'`  
+`'GrahamCampbell\Binput\BinputServiceProvider'`  
+`'GrahamCampbell\Passwd\PasswdServiceProvider'`  
+`'GrahamCampbell\Navigation\NavigationServiceProvider'`  
+`'GrahamCampbell\CMSCore\CMSCoreServiceProvider'`  
 
-You will need to write your own contact form with this plugin. CMS Comment simply provides you with the backend functionality to create a comment form. CMS Comment form will register the route `contact.post` which will accept `POST` requests to the path `contact`. Note that a basic form is included and can be pulled into one of your own views if you want it.
+Once CMS Contact is installed, you need to register the service provider. Open up `app/config/app.php` and add the following to the `providers` key.  
+
+`'GrahamCampbell\CMSContact\CMSContactServiceProvider'`  
+
+
+## Usage
+
+There is currently no usage documentation besides the [API Documentation](http://grahamcampbell.github.io/CMS-Contact
+) for CMS Contact.  
+
+You will need to write your own contact form with this plugin. CMS Comment simply provides you with the backend functionality to create a comment form. CMS Comment form will register the route `contact.post` which will accept `POST` requests to the path `contact`. Note that a basic form is included and can be pulled into one of your own views if you want it.  
 
 
 ## Updating Your Fork
