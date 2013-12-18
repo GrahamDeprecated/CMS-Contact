@@ -39,6 +39,11 @@ use GrahamCampbell\CMSCore\Controllers\BaseController;
  */
 class ContactController extends BaseController
 {
+    /**
+     * Submit the contact form.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function postSubmit()
     {
         $input = array(
