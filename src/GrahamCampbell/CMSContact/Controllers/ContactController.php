@@ -33,9 +33,10 @@ use GrahamCampbell\HTMLMin\Facades\HTMLMin;
 use GrahamCampbell\CMSCore\Facades\UserProvider;
 use GrahamCampbell\CMSCore\Controllers\BaseController;
 
-class ContactController extends BaseController {
-
-    public function postSubmit() {
+class ContactController extends BaseController
+{
+    public function postSubmit()
+    {
         $input = array(
             'first_name' => Binput::get('first_name'),
             'last_name'  => Binput::get('last_name'),

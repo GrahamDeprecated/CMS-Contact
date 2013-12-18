@@ -22,8 +22,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class CMSContactServiceProvider extends ServiceProvider {
-
+class CMSContactServiceProvider extends ServiceProvider
+{
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -36,7 +36,8 @@ class CMSContactServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function boot() {
+    public function boot()
+    {
         $this->package('graham-campbell/cms-contact');
 
         include __DIR__.'/../../routes.php';
@@ -47,7 +48,8 @@ class CMSContactServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         //
     }
 
@@ -56,7 +58,8 @@ class CMSContactServiceProvider extends ServiceProvider {
      *
      * @return array
      */
-    public function provides() {
+    public function provides()
+    {
         return array();
     }
 }
