@@ -1,4 +1,4 @@
-<?php namespace GrahamCampbell\CMSContact;
+<?php
 
 /**
  * This file is part of CMS Contact by Graham Campbell.
@@ -12,18 +12,23 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Affero General Public License for more details.
- *
- * @package    CMS-Contact
- * @author     Graham Campbell
- * @license    GNU AFFERO GENERAL PUBLIC LICENSE
- * @copyright  Copyright (C) 2013  Graham Campbell
- * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
+
+namespace GrahamCampbell\CMSContact;
 
 use Illuminate\Support\ServiceProvider;
 
-class CMSContactServiceProvider extends ServiceProvider {
-
+/**
+ * This is the cms contact service provider class.
+ *
+ * @package    CMS-Contact
+ * @author     Graham Campbell
+ * @copyright  Copyright (C) 2013  Graham Campbell
+ * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md
+ * @link       https://github.com/GrahamCampbell/CMS-Contact
+ */
+class CMSContactServiceProvider extends ServiceProvider
+{
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -36,7 +41,8 @@ class CMSContactServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function boot() {
+    public function boot()
+    {
         $this->package('graham-campbell/cms-contact');
 
         include __DIR__.'/../../routes.php';
@@ -47,7 +53,8 @@ class CMSContactServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         //
     }
 
@@ -56,7 +63,8 @@ class CMSContactServiceProvider extends ServiceProvider {
      *
      * @return array
      */
-    public function provides() {
+    public function provides()
+    {
         return array();
     }
 }
