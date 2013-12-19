@@ -95,7 +95,7 @@ Please submit pull requests against the develop branch.
 
 GNU AFFERO GENERAL PUBLIC LICENSE  
 
-CMS Contact Is A Bootstrap CMS Plugin That Adds A Contact Form Backend  
+CMS Contact Is A CMS Core Plugin That Adds A Contact Form Backend  
 Copyright (C) 2013  Graham Campbell  
 
 This program is free software: you can redistribute it and/or modify
