@@ -57,8 +57,7 @@ Once CMS Contact is installed, you need to register the service provider. Open u
 
 ## Usage
 
-There is currently no usage documentation besides the [API Documentation](http://grahamcampbell.github.io/CMS-Contact
-) for CMS Contact.  
+There is currently no usage documentation besides the [API Documentation](http://grahamcampbell.github.io/CMS-Contact) for CMS Contact.  
 
 You will need to write your own contact form with this plugin. CMS Comment simply provides you with the backend functionality to create a comment form. CMS Comment form will register the route `contact.post` which will accept `POST` requests to the path `contact`. Note that a basic form is included and can be pulled into one of your own views if you want it.  
 
