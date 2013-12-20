@@ -26,7 +26,7 @@ use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\HTMLMin\Facades\HTMLMin;
 use GrahamCampbell\Queuing\Facades\Queuing;
 use GrahamCampbell\CMSCore\Facades\UserProvider;
-use GrahamCampbell\CMSCore\Controllers\BaseController;
+use GrahamCampbell\CMSCore\Controllers\AbstractController;
 
 /**
  * This is the contact controller class.
@@ -37,7 +37,7 @@ use GrahamCampbell\CMSCore\Controllers\BaseController;
  * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md
  * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
-class ContactController extends BaseController
+class ContactController extends AbstractController
 {
     /**
      * Submit the contact form.
