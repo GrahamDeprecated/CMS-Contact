@@ -85,7 +85,7 @@ class ContactController extends AbstractController
             $data = array(
                 'view'    => 'cms-contact::message',
                 'email'   => $email,
-                'subject' => Config::get('cms.name').' - New Message',
+                'subject' => Config::get('platform.name').' - New Message',
                 'url'     => $url,
                 'contact' => $input['email'],
                 'name'    => $input['first_name'].' '.$input['last_name'],
@@ -97,7 +97,7 @@ class ContactController extends AbstractController
             $data = array(
                 'view'    => 'cms-contact::thanks',
                 'email'   => $input['email'],
-                'subject' => Config::get('cms.name').' - Notification',
+                'subject' => Config::get('platform.name').' - Notification',
                 'url'     => $url,
                 'name'    => $input['first_name'],
                 'quote'   => $quote
