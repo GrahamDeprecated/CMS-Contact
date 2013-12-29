@@ -2,7 +2,7 @@
     "name": "graham-campbell/cms-contact",
     "description": "CMS Contact Is A CMS Core Plugin That Adds A Contact Form Backend",
     "keywords": ["laravel", "framework", "cms contact", "cms", "contact", "form", "contact form", "CMS Contact", "CMS-Contact", "Graham Campbell", "GrahamCampbell"],
-    "license": "GNU Affero General Public License v3",
+    "license": "AGPL-3.0",
     "authors": [
         {
             "name": "Graham Campbell",

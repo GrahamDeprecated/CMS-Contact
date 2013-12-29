@@ -1,4 +1,4 @@
-@extends('layouts.email')
+@extends(Config::get('views.email', 'layouts.email'))
 
 @section('content')
 <p>Thank you {{ $name }} for contacting <a href="{{ $url }}">{{ Config::get('platform.name') }}</a>.</p>
