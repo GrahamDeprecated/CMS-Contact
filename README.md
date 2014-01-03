@@ -10,6 +10,11 @@ CMS Contact
 [![Still Maintained](http://stillmaintained.com/GrahamCampbell/CMS-Contact.png)](http://stillmaintained.com/GrahamCampbell/CMS-Contact)
 
 
+## WARNING
+
+#### This package will depreciated soon. The final release will be V0.2 Alpha. It has been replaced by my [Laravel Contact](https://github.com/GrahamCampbell/Laravel-Contact) package. This package new package will be comparable with all Laravel applications and will include native support for Bootstrap CMS. Note that [CMS Core](https://github.com/GrahamCampbell/CMS-Core) will also be deprecated.
+
+
 ## What Is CMS Contact?
 
 CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin that adds a contact form backend.  
