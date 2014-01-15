@@ -41,7 +41,7 @@ Please check the system requirements before installing CMS Contact.
 
 To get the latest version of CMS Contact, simply require it in your `composer.json` file.  
 
-`"graham-campbell/cms-contact": "dev-master"`  
+`"graham-campbell/cms-contact": "*"`  
 
 You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.  
 
