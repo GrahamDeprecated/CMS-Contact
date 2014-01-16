@@ -26,18 +26,18 @@ use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\HTMLMin\Facades\HTMLMin;
 use GrahamCampbell\Queuing\Facades\Queuing;
 use GrahamCampbell\CMSCore\Facades\UserProvider;
-use GrahamCampbell\CMSCore\Controllers\BaseController;
+use GrahamCampbell\CMSCore\Controllers\AbstractController;
 
 /**
  * This is the contact controller class.
  *
  * @package    CMS-Contact
  * @author     Graham Campbell
- * @copyright  Copyright (C) 2013  Graham Campbell
- * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md
+ * @copyright  Copyright (C) 2013-2014  Graham Campbell
+ * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md
  * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
-class ContactController extends BaseController
+class ContactController extends AbstractController
 {
     /**
      * Submit the contact form.
@@ -85,7 +85,7 @@ class ContactController extends BaseController
             $data = array(
                 'view'    => 'cms-contact::message',
                 'email'   => $email,
-                'subject' => Config::get('cms.name').' - New Message',
+                'subject' => Config::get('platform.name').' - New Message',
                 'url'     => $url,
                 'contact' => $input['email'],
                 'name'    => $input['first_name'].' '.$input['last_name'],
@@ -97,7 +97,7 @@ class ContactController extends BaseController
             $data = array(
                 'view'    => 'cms-contact::thanks',
                 'email'   => $input['email'],
-                'subject' => Config::get('cms.name').' - Notification',
+                'subject' => Config::get('platform.name').' - Notification',
                 'url'     => $url,
                 'name'    => $input['first_name'],
                 'quote'   => $quote

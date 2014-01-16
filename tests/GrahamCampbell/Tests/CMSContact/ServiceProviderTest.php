@@ -14,12 +14,12 @@
  * GNU Affero General Public License for more details.
  */
 
-namespace GrahamCampbell\CMSContact;
+namespace GrahamCampbell\Tests\CMSContact;
 
-use Illuminate\Support\ServiceProvider;
+use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
 
 /**
- * This is the cms contact service provider class.
+ * This is the service provider test class.
  *
  * @package    CMS-Contact
  * @author     Graham Campbell
@@ -27,44 +27,7 @@ use Illuminate\Support\ServiceProvider;
  * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md
  * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
-class CMSContactServiceProvider extends ServiceProvider
+class ServiceProviderTest extends AbstractTestCase
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
-    /**
-     * Bootstrap the application events.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->package('graham-campbell/cms-contact');
-
-        include __DIR__.'/../../routes.php';
-    }
-
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return array();
-    }
+    use ServiceProviderTestCaseTrait;
 }

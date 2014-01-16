@@ -14,12 +14,12 @@
  * GNU Affero General Public License for more details.
  */
 
-namespace GrahamCampbell\CMSContact;
+namespace GrahamCampbell\Tests\CMSContact;
 
-use Illuminate\Support\ServiceProvider;
+use GrahamCampbell\Tests\CMSCore\AbstractTestCase as TestCase;
 
 /**
- * This is the cms contact service provider class.
+ * This is the abstract test case class.
  *
  * @package    CMS-Contact
  * @author     Graham Campbell
@@ -27,44 +27,37 @@ use Illuminate\Support\ServiceProvider;
  * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md
  * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
-class CMSContactServiceProvider extends ServiceProvider
+abstract class AbstractTestCase extends TestCase
 {
     /**
-     * Indicates if loading of the provider is deferred.
+     * Get the application base path.
      *
-     * @var bool
+     * @return string
      */
-    protected $defer = false;
-
-    /**
-     * Bootstrap the application events.
-     *
-     * @return void
-     */
-    public function boot()
+    protected function getBasePath()
     {
-        $this->package('graham-campbell/cms-contact');
-
-        include __DIR__.'/../../routes.php';
+        return __DIR__.'/../../../../src';
     }
 
     /**
-     * Register the service provider.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
-
-    /**
-     * Get the services provided by the provider.
+     * Get the required service providers.
      *
      * @return array
      */
-    public function provides()
+    protected function getRequiredServiceProviders()
     {
-        return array();
+        return array_merge(parent::getRequiredServiceProviders(), array(
+            'GrahamCampbell\CMSCore\CMSCoreServiceProvider'
+        ));
+    }
+
+    /**
+     * Get the service provider class.
+     *
+     * @return string
+     */
+    protected function getServiceProviderClass()
+    {
+        return 'GrahamCampbell\CMSContact\CMSContactServiceProvider';
     }
 }

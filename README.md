@@ -3,11 +3,16 @@ CMS Contact
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GrahamCampbell/CMS-Contact/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![Build Status](https://travis-ci.org/GrahamCampbell/CMS-Contact.png?branch=develop)](https://travis-ci.org/GrahamCampbell/CMS-Contact)
-[![Coverage Status](https://coveralls.io/repos/GrahamCampbell/CMS-Contact/badge.png?branch=develop)](https://coveralls.io/r/GrahamCampbell/CMS-Contact)
+[![Build Status](https://travis-ci.org/GrahamCampbell/CMS-Contact.png)](https://travis-ci.org/GrahamCampbell/CMS-Contact)
+[![Coverage Status](https://coveralls.io/repos/GrahamCampbell/CMS-Contact/badge.png)](https://coveralls.io/r/GrahamCampbell/CMS-Contact)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact/badges/quality-score.png?s=dc4c5381f6889d8e70061d20d77fe81b571676bd)](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact)
 [![Latest Version](https://poser.pugx.org/graham-campbell/cms-contact/v/stable.png)](https://packagist.org/packages/graham-campbell/cms-contact)
 [![Still Maintained](http://stillmaintained.com/GrahamCampbell/CMS-Contact.png)](http://stillmaintained.com/GrahamCampbell/CMS-Contact)
+
+
+## WARNING
+
+#### This package will depreciated soon. The final release will be V0.2 Alpha. It has been replaced by my [Laravel Contact](https://github.com/GrahamCampbell/Laravel-Contact) package. This package new package will be compatible with all Laravel applications and will include native support for [Bootstrap CMS](https://github.com/GrahamCampbell/Bootstrap-CMS). Note that [CMS Core](https://github.com/GrahamCampbell/CMS-Core) will also be deprecated.
 
 
 ## What Is CMS Contact?
@@ -20,7 +25,7 @@ CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin t
 * CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) and [Coveralls](https://coveralls.io/r/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
 * CMS Contact uses [Composer](https://getcomposer.org) to load and manage dependencies.  
 * CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/develop/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
-* CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md).  
+* CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
 
 
 ## System Requirements
@@ -36,17 +41,24 @@ Please check the system requirements before installing CMS Contact.
 
 To get the latest version of CMS Contact, simply require it in your `composer.json` file.  
 
-`"graham-campbell/cms-contact": "dev-master"`  
+`"graham-campbell/cms-contact": "*"`  
 
 You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.  
 
 You will need to register many service providers before you attempt to load the CMS Contact service provider. Open up `app/config/app.php` and add the following to the `providers` key.  
 
+`'Lightgear\Asset\AssetServiceProvider'`  
+`'Cartalyst\Sentry\SentryServiceProvider'`  
+`'GrahamCampbell\Viewer\ViewerServiceProvider'`  
 `'GrahamCampbell\Queuing\QueuingServiceProvider'`  
 `'GrahamCampbell\HTMLMin\HTMLMinServiceProvider'`  
-`'GrahamCampbell\Security\SecurityMinServiceProvider'`  
+`'GrahamCampbell\Markdown\MarkdownServiceProvider'`  
+`'GrahamCampbell\Flysystem\FlysystemServiceProvider'`  
+`'GrahamCampbell\Security\SecurityServiceProvider'`  
 `'GrahamCampbell\Binput\BinputServiceProvider'`  
 `'GrahamCampbell\Passwd\PasswdServiceProvider'`  
+`'GrahamCampbell\Throttle\ThrottleServiceProvider'`  
+`'GrahamCampbell\Credentials\CredentialsServiceProvider'`  
 `'GrahamCampbell\Navigation\NavigationServiceProvider'`  
 `'GrahamCampbell\CMSCore\CMSCoreServiceProvider'`  
 
@@ -75,7 +87,7 @@ The first command is only necessary the first time. If you have issues merging, 
 
 You can then update the branch:  
 
-    git pull --rebase upstream develop
+    git pull --rebase upstream master
     git push --force origin <branch_name>
 
 Once it is set up, run `git mergetool`. Once all conflicts are fixed, run `git rebase --continue`, and `git push --force origin <branch_name>`.  
@@ -85,9 +97,8 @@ Once it is set up, run `git mergetool`. Once all conflicts are fixed, run `git r
 
 Please submit pull requests against the develop branch.  
 
-* Any pull requests made against the master branch will be closed immediately.  
-* If you plan to fix a bug, please create a branch called `fix-`, followed by an appropriate name.  
-* If you plan to add a feature, please create a branch called `feature-`, followed by an appropriate name.  
+* Bug fixes shouldn't be sent to the master branch unless they fix features that exist only in the upcoming release.  
+* Before sending a pull request for a new feature, you should first create an issue with [Proposal] in the title.  
 * Please follow the [PSR-2 Coding Style](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) and [PHP-FIG Naming Conventions](https://github.com/php-fig/fig-standards/blob/master/bylaws/002-psr-naming-conventions.md).  
 
 
@@ -96,7 +107,7 @@ Please submit pull requests against the develop branch.
 GNU AFFERO GENERAL PUBLIC LICENSE  
 
 CMS Contact Is A CMS Core Plugin That Adds A Contact Form Backend  
-Copyright (C) 2013  Graham Campbell  
+Copyright (C) 2013-2014  Graham Campbell  
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
