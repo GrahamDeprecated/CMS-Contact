@@ -24,7 +24,7 @@ CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin t
 * CMS Contact uses [Travis CI](https://travis-ci.org/GrahamCampbell/CMS-Contact) to run tests to check if it's working as it should.  
 * CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) and [Coveralls](https://coveralls.io/r/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
 * CMS Contact uses [Composer](https://getcomposer.org) to load and manage dependencies.  
-* CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/develop/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
+* CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/master/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
 * CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
 
 
@@ -95,7 +95,7 @@ Once it is set up, run `git mergetool`. Once all conflicts are fixed, run `git r
 
 ## Pull Requests
 
-Please submit pull requests against the develop branch.  
+Please review these guidelines before submitting any pull requests.  
 
 * Bug fixes shouldn't be sent to the master branch unless they fix features that exist only in the upcoming release.  
 * Before sending a pull request for a new feature, you should first create an issue with [Proposal] in the title.  
