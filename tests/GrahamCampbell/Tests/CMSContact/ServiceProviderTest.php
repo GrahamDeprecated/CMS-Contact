@@ -24,7 +24,7 @@ use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
  * @package    CMS-Contact
  * @author     Graham Campbell
  * @copyright  Copyright (C) 2013-2014  Graham Campbell
- * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/develop/LICENSE.md
+ * @license    https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md
  * @link       https://github.com/GrahamCampbell/CMS-Contact
  */
 class ServiceProviderTest extends AbstractTestCase
