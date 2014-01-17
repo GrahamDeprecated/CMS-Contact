@@ -6,8 +6,8 @@ CMS Contact
 [![Build Status](https://travis-ci.org/GrahamCampbell/CMS-Contact.png)](https://travis-ci.org/GrahamCampbell/CMS-Contact)
 [![Coverage Status](https://coveralls.io/repos/GrahamCampbell/CMS-Contact/badge.png)](https://coveralls.io/r/GrahamCampbell/CMS-Contact)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact/badges/quality-score.png?s=dc4c5381f6889d8e70061d20d77fe81b571676bd)](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/937b3351-8900-4da6-abad-1df23a898b61/mini.png)](https://insight.sensiolabs.com/projects/937b3351-8900-4da6-abad-1df23a898b61)
 [![Latest Version](https://poser.pugx.org/graham-campbell/cms-contact/v/stable.png)](https://packagist.org/packages/graham-campbell/cms-contact)
-[![Still Maintained](http://stillmaintained.com/GrahamCampbell/CMS-Contact.png)](http://stillmaintained.com/GrahamCampbell/CMS-Contact)
 
 
 ## WARNING
@@ -24,7 +24,7 @@ CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin t
 * CMS Contact uses [Travis CI](https://travis-ci.org/GrahamCampbell/CMS-Contact) to run tests to check if it's working as it should.  
 * CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) and [Coveralls](https://coveralls.io/r/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
 * CMS Contact uses [Composer](https://getcomposer.org) to load and manage dependencies.  
-* CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/master/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and a [wiki](https://github.com/GrahamCampbell/CMS-Contact/wiki).  
+* CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/master/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and [api docs](http://grahamcampbell.github.io/CMS-Contact).  
 * CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
 
 
@@ -97,7 +97,7 @@ Once it is set up, run `git mergetool`. Once all conflicts are fixed, run `git r
 
 Please review these guidelines before submitting any pull requests.  
 
-* Bug fixes shouldn't be sent to the master branch unless they fix features that exist only in the upcoming release.  
+* When submitting bug fixes, check if a maintenance branch exists for an older series, then pull against that older branch if the bug is present in it.  
 * Before sending a pull request for a new feature, you should first create an issue with [Proposal] in the title.  
 * Please follow the [PSR-2 Coding Style](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) and [PHP-FIG Naming Conventions](https://github.com/php-fig/fig-standards/blob/master/bylaws/002-psr-naming-conventions.md).  
 
