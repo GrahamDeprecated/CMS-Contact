@@ -21,8 +21,8 @@ CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin t
 
 * CMS Contact was created by, and is maintained by [Graham Campbell](https://github.com/GrahamCampbell).  
 * CMS Contact relies on my [CMS Core](https://github.com/GrahamCampbell/CMS-Core) package.  
-* CMS Contact uses [Travis CI](https://travis-ci.org/GrahamCampbell/CMS-Contact) to run tests to check if it's working as it should.  
-* CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) and [Coveralls](https://coveralls.io/r/GrahamCampbell/CMS-Contact) to run additional tests and checks.  
+* CMS Contact uses [Travis CI](https://travis-ci.org/GrahamCampbell/CMS-Contact) with [Coveralls](https://coveralls.io/r/GrahamCampbell/CMS-Contact) to check everything is working.  
+* CMS Contact uses [Scrutinizer CI](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact) and [SensioLabsInsight](https://insight.sensiolabs.com/projects/937b3351-8900-4da6-abad-1df23a898b61) to run additional checks.  
 * CMS Contact uses [Composer](https://getcomposer.org) to load and manage dependencies.  
 * CMS Contact provides a [change log](https://github.com/GrahamCampbell/CMS-Contact/blob/master/CHANGELOG.md), [releases](https://github.com/GrahamCampbell/CMS-Contact/releases), and [api docs](http://grahamcampbell.github.io/CMS-Contact).  
 * CMS Contact is licensed under the GNU AGPLv3, available [here](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md).  
