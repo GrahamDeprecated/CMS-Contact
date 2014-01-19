@@ -7,6 +7,7 @@ CMS Contact
 [![Coverage Status](https://coveralls.io/repos/GrahamCampbell/CMS-Contact/badge.png)](https://coveralls.io/r/GrahamCampbell/CMS-Contact)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact/badges/quality-score.png?s=dc4c5381f6889d8e70061d20d77fe81b571676bd)](https://scrutinizer-ci.com/g/GrahamCampbell/CMS-Contact)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/937b3351-8900-4da6-abad-1df23a898b61/mini.png)](https://insight.sensiolabs.com/projects/937b3351-8900-4da6-abad-1df23a898b61)
+[![Software License](https://poser.pugx.org/graham-campbell/cms-contact/license.png)](https://github.com/GrahamCampbell/CMS-Contact/blob/master/LICENSE.md)
 [![Latest Version](https://poser.pugx.org/graham-campbell/cms-contact/v/stable.png)](https://packagist.org/packages/graham-campbell/cms-contact)
 
 
