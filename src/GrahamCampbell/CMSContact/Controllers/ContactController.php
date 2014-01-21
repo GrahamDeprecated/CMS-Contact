@@ -74,7 +74,7 @@ class ContactController extends AbstractController
                 return Redirect::to(Config::get('cms-contact::path'))->withInput();
             }
 
-            $email = $user->getEmail();
+            $email = $user->email;
         }
 
         $url = URL::route('pages.show', array('pages' => 'home'));
