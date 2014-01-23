@@ -46,6 +46,7 @@ class CMSContactServiceProvider extends ServiceProvider
         $this->package('graham-campbell/cms-contact');
 
         include __DIR__.'/../../routes.php';
+        include __DIR__.'/../../filters.php';
     }
 
     /**
