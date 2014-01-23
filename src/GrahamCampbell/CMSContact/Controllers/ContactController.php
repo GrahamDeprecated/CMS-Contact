@@ -40,6 +40,18 @@ use GrahamCampbell\CMSCore\Controllers\AbstractController;
 class ContactController extends AbstractController
 {
     /**
+     * Constructor (setup access permissions).
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->beforeFilter('throttle.contact', array('only' => array('postSubmit')));
+
+        parent::__construct();
+    }
+
+    /**
      * Submit the contact form.
      *
      * @return \Illuminate\Http\Response

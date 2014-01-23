@@ -14,7 +14,7 @@
  * GNU Affero General Public License for more details.
  */
 
-Route::filter('contact', function ($route, $request) {
+Route::filter('throttle.contact', function ($route, $request) {
     if (!Throttle::hit($request, 2, 30)->check()) {
         Session::flash('error', 'You have made too many submissions recently. Please try again later.');
         return Redirect::route(Config::get('cms-contact::path'))->withInput();
