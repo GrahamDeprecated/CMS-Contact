@@ -56,7 +56,21 @@ class CMSContactServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerContactController();
+    }
+
+    /**
+     * Register the contact controller class.
+     *
+     * @return void
+     */
+    protected function registerContactController()
+    {
+        $this->app->bind('GrahamCampbell\CMSContact\Controllers\ContactController', function ($app) {
+            $credentials = $app['credentials'];
+
+            return new Controllers\ContactController($credentials);
+        });
     }
 
     /**
