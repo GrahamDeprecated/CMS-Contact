@@ -26,6 +26,7 @@ use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\HTMLMin\Facades\HTMLMin;
 use GrahamCampbell\Queuing\Facades\Queuing;
 use GrahamCampbell\CMSCore\Facades\UserProvider;
+use GrahamCampbell\Credentials\Classes\Credentials;
 use GrahamCampbell\CMSCore\Controllers\AbstractController;
 
 /**
@@ -40,15 +41,16 @@ use GrahamCampbell\CMSCore\Controllers\AbstractController;
 class ContactController extends AbstractController
 {
     /**
-     * Constructor (setup access permissions).
+     * Create a new instance.
      *
+     * @param  \GrahamCampbell\Credentials\Classes\Credentials  $credentials
      * @return void
      */
-    public function __construct()
+    public function __construct(Credentials $credentials)
     {
         $this->beforeFilter('throttle.contact', array('only' => array('postSubmit')));
 
-        parent::__construct();
+        parent::__construct($credentials);
     }
 
     /**
