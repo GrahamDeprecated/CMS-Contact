@@ -21,9 +21,8 @@ return array(
     | Path To The Form
     |--------------------------------------------------------------------------
     |
-    | This defines the path to the contact form.
-    |
-    | This is the page where your contact form should be.
+    | This defines the path to the contact form. This is the page where your
+    | contact form should be.
     |
     | Default to 'pages/contact'.
     |
@@ -36,11 +35,9 @@ return array(
     | Contact Form Email
     |--------------------------------------------------------------------------
     |
-    | This defines the email address to send contact form messages to.
-    |
-    | Setting it to null will email the contact form data to the user with the
-    | id of 1. Please only enter an email address here if you change it from
-    | null.
+    | This defines the email address to send contact form messages to. Setting
+    | it to null will email the contact form data to the user with the id of 1.
+    | Please only enter an email address here if you change it from null.
     |
     | Default to null.
     |
