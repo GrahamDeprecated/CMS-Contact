@@ -40,11 +40,7 @@ CMS Contact is a [CMS Core](https://github.com/GrahamCampbell/CMS-Core) plugin t
 
 Please check the system requirements before installing CMS Contact.
 
-To get the latest version of CMS Contact, simply require it in your `composer.json` file.
-
-`"graham-campbell/cms-contact": "*"`
-
-You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
+To get the latest version of CMS Contact, simply require `"graham-campbell/cms-contact": "0.2.*@alpha"` in your `composer.json` file. You'll then need to run `composer install` or `composer update` to download it and have the autoloader updated.
 
 You will need to register many service providers before you attempt to load the CMS Contact service provider. Open up `app/config/app.php` and add the following to the `providers` key.
 
