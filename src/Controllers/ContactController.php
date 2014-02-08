@@ -76,16 +76,16 @@ class ContactController extends AbstractController
 
         $val = Validator::make($input, $rules);
         if ($val->fails()) {
-            return Redirect::to(Config::get('cms-contact::path'))->withInput()->withErrors($val);
+            return Redirect::to(Config::get('graham-campbell/cms-contact::path'))->withInput()->withErrors($val);
         }
 
-        $email = Config::get('cms-contact::email');
+        $email = Config::get('graham-campbell/cms-contact::email');
 
         if ($email === null) {
             $user = UserProvider::find(1);
             if (!$user) {
                 Session::flash('error', 'We were unable to send the message. Please contact support.');
-                return Redirect::to(Config::get('cms-contact::path'))->withInput();
+                return Redirect::to(Config::get('graham-campbell/cms-contact::path'))->withInput();
             }
 
             $email = $user->email;
@@ -97,7 +97,7 @@ class ContactController extends AbstractController
 
         try {
             $data = array(
-                'view'    => 'cms-contact::message',
+                'view'    => 'graham-campbell/cms-contact::message',
                 'email'   => $email,
                 'subject' => Config::get('platform.name').' - New Message',
                 'url'     => $url,
@@ -109,7 +109,7 @@ class ContactController extends AbstractController
             Queuing::pushMail($data);
 
             $data = array(
-                'view'    => 'cms-contact::thanks',
+                'view'    => 'graham-campbell/cms-contact::thanks',
                 'email'   => $input['email'],
                 'subject' => Config::get('platform.name').' - Notification',
                 'url'     => $url,
@@ -121,7 +121,7 @@ class ContactController extends AbstractController
         } catch (\Exception $e) {
             Log::alert($e);
             Session::flash('error', 'We were unable to send the message. Please contact support.');
-            return Redirect::to(Config::get('cms-contact::path'))->withInput();
+            return Redirect::to(Config::get('graham-campbell/cms-contact::path'))->withInput();
         }
 
         Session::flash('success', 'Your message was sent successfully. Thank you for contacting us.');

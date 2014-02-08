@@ -45,9 +45,9 @@
         "graham-campbell/testbench": "0.2.*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "GrahamCampbell\\CMSContact\\": "src/",
-            "GrahamCampbell\\Tests\\CMSContact": "tests/"
+            "GrahamCampbell\\Tests\\CMSContact\\": "tests/"
         }
     },
     "extra": {

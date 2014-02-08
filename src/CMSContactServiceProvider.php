@@ -43,10 +43,10 @@ class CMSContactServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('graham-campbell/cms-contact');
+        $this->package('graham-campbell/cms-contact', 'graham-campbell/cms-contact', __DIR__);
 
-        include __DIR__.'/../../routes.php';
-        include __DIR__.'/../../filters.php';
+        include __DIR__.'/routes.php';
+        include __DIR__.'/filters.php';
     }
 
     /**
